@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Document</title>
+	<style type="text/css">
+		body,html{
+			position: relative;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			background-color: #fff;
+		}
+		.animate{
+			-webkit-transition: all .3s;
+			-moz-transition: all .3s;
+			transition: all .3s;
+		}
+		.m-pic-cover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(0,0,0,.5);
+		}
+		.m-pic-content{
+			background-color: red;
+			width: 150px;
+			height: 150px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="m-pic-cover">
+		<div class="m-pic-content m-pic" id="j-pic"></div>
+	</div>
+	<script type="text/javascript" src="./js/hammer.min.js"></script>
+	<script type="text/javascript" src="./hammer-pic.js"></script>
+	<script type="text/javascript">
+		var pic = new Pic('#j-pic');
+		pic.picInit();
+		//console.log(t);
+	</script>
+</body>
+</html>
